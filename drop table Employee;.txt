@@ -1,0 +1,16 @@
+drop table Employee;
+create table Employee25(id int primary key,name varchar(20),department varchar(20),salary number(8,2),gender varchar(20),age int,city varchar(20));
+insert into Employee25 values(&id,'&name','&department',&salary,'&gender',&age,'&city');
+select *from Employee25;
+select name,age,city from Employee25;
+select city,name,id from Employee25;
+select *from Employee25 where city='London';
+select *from Employee25 where gender='Female';
+select *from Employee25 where city='London' and gender='Female';
+select name,age from Employee25 where salary>50000;
+select name fname,age,department dept from Employee25 Emp where gender='Male';
+select *from dual;
+select 'Myself ' || ' Abhinaya' || ' Gembali' from dual;
+select 'Mr ' || name || ' your salary is ' || salary  from Employee25 where gender = 'Male';
+select 'Mrs ' || name || ' your salary is ' || salary from Employee25 where gender = 'Female';
+commit;
